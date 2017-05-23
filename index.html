@@ -7,20 +7,62 @@
     <title>Mortgage</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.1.7/css/ion.rangeSlider.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.1.7/css/ion.rangeSlider.skinHTML5.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <div class="content">
         <div class="container">
-          тест шрифта
+
+        <!-- <div class="row">
+          <input type="radio" name="house" value="old" id="old-house">
+          <label for="old-house">Готовое жильё</label><br>
+          <input type="radio" name="house" value="new" id="new-house">
+          <label for="new-house">Новостройка</label>
+        </div> -->
+
+        <input id="area" type="checkbox">
+        <label for="area">Площадь квартиры</label><br>
+
+        <input id="vtbcard" type="checkbox">
+        <label for="vtbcard">Я получаю зарплату на карту ВТБ</label><br>
+
+        <input id="twodoc" type="checkbox">
+        <label for="twodoc">Я готов предоставить только два документа</label><br>
+
+        <div class="row">
+          <label for="app_cost">Стоимость квартиры</label>
+          <input type="text" id="app_cost" name="example_name" value="" />
+        </div>
+
+        <div class="row">
+          <label for="paste">Первоначальный взнос</label>
+          <input type="text" id="paste" name="example_name" value="" />
+        </div>
+
+        <div class="row">
+          <label for="paste">Срок ипотеки</label>
+          <input type="text" id="period" name="example_name" value="" />
+        </div>
+
+        <p>РАЗМЕР КРЕДИТА: <span></span></p>
+        <p>ЕЖЕМЕСЯЧНЫЙ ПЛАТЕЖ: <span></span></p>
+        <p>НЕОБХОДИМЫЙ ЕЖЕМЕСЯЧНЫЙ ДОХОД: <span></span></p>
+        <p>СТАВКА ПО КРЕДИТУ: <span></span></p>
+
+
+
         </div>
         <div class="footer">
         </div>
       </div>
     </div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.1.7/js/ion.rangeSlider.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
