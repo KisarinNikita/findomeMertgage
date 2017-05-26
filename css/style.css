@@ -32,11 +32,157 @@ a:focus {
 .container {
   margin-top: 50px;
 }
+@media (max-width: 1000px) {
+  .container {
+    width: 996px;
+  }
+}
 .row {
   margin: 0px;
-  margin-bottom: 35px;
-<<<<<<< Updated upstream
+  margin-bottom: 10px;
 }
-=======
+.irs-single {
+  display: none;
 }
->>>>>>> Stashed changes
+.irs-grid-pol.small {
+  display: none;
+}
+.slider-result {
+  float: left;
+  margin-top: -25px;
+  margin-bottom: 0px;
+  padding-left: 15px;
+}
+.slider-result p {
+  float: left;
+  font-size: 32px;
+}
+.slider-result span {
+  float: right;
+  font-size: 22px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.irs-line {
+  height: 2px;
+  top: 33px;
+  background: #939393;
+}
+.irs-bar {
+  height: 2px;
+  top: 33px;
+  background: #3e90b1;
+}
+.irs-bar-edge {
+  height: 2px;
+  top: 33px;
+  background: #3e90b1;
+}
+.irs-grid-pol {
+  top: -30px;
+  display: none;
+}
+.irs-grid-text {
+  top: -45px;
+}
+.irs-slider {
+  top: 22px;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #aaa;
+  background: #fff;
+  border-radius: 22px;
+  -moz-border-radius: 22px;
+  cursor: pointer;
+}
+.irs-max,
+.irs-min {
+  display: none;
+}
+.irs-with-grid {
+  height: 75px;
+}
+.ion-item {
+  margin-top: 20px;
+  padding-left: 15px;
+}
+.ion-item label {
+  font-size: 18px;
+  margin-left: -15px;
+  margin-bottom: 10px;
+}
+.result-issue {
+  padding-left: 74px;
+}
+.result-issue label {
+  font-weight: 400;
+  font-size: 16px;
+  color: #939393;
+}
+.result-issue p {
+  font-size: 32px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.result-issue .devider {
+  height: 1px;
+  background: #ccc;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 70%;
+}
+.calculate-issue {
+  padding-right: 50px;
+}
+input[type=checkbox],
+input[type=radio] {
+  display: none;
+}
+input[type=checkbox] + label:before {
+  content: "\2713";
+  color: transparent;
+  display: inline-block;
+  border: 1px solid #000;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: -5px 5px 0 0;
+  height: 20px;
+  width: 20px;
+  margin-right: 15px;
+  text-align: center;
+  vertical-align: middle;
+  transition: color ease .3s;
+  cursor: pointer;
+}
+input[type=checkbox]:checked + label:before {
+  color: #fff;
+  background: #428bca;
+  font-size: 14px;
+  border: 1px solid #428bca;
+}
+input[type=radio] + label:before {
+  content: "\26AB";
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid #000;
+  font-size: 14px;
+  line-height: 20px;
+  margin: -5px 5px 0 0;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0;
+  transition: font-size ease 0.3s;
+}
+input[type=radio]:checked + label:before {
+  font-size: 20px;
+}
+.check-line {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.check-line label {
+  font-weight: 400;
+}

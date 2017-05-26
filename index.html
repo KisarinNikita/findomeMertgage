@@ -17,35 +17,85 @@
     <div class="wrapper">
       <div class="content">
         <div class="container">
+        <h1>Рассчитайте вашу ипотеку</h1>
 
-        <input id="area" type="checkbox">
-        <label for="area">Площадь квартиры</label><br>
+        <div class="col-xs-6 calculate-issue">
 
-        <input id="vtbcard" type="checkbox">
-        <label for="vtbcard">Я получаю зарплату на карту ВТБ</label><br>
+          <div class="check-line">
+            <input id="area" type="checkbox" name="check">
+            <label for="area">Площадь квартиры</label><br>
+          </div>
 
-        <input id="twodoc" type="checkbox">
-        <label for="twodoc">Я готов предоставить только два документа</label><br>
+          <div class="check-line">
+            <input id="vtbcard" type="checkbox">
+            <label for="vtbcard">Я получаю зарплату на карту ВТБ</label><br>
+          </div>
 
-        <div class="row">
-          <label for="app_cost">Стоимость квартиры</label>
-          <input type="text" id="app_cost" name="example_name" value="" />
+          <div class="check-line">
+            <input id="twodoc" type="checkbox">
+            <label for="twodoc">Я готов предоставить только два документа</label><br>
+          </div>
+
+
+          <div class="row">
+            <div class="ion-item">
+              <label>Стоимость квартиры</label>
+              <input type="text" id="app_cost" name="example_name" value="" />
+            </div>
+
+            <div class="slider-result">
+              <p id="result-app_cost"></p><span>&#8381;</span>
+            </div>
+
+          </div>
+
+          <div class="row">
+            <div class="ion-item">
+              <label for="paste">Первоначальный взнос</label>
+              <input type="text" id="paste" name="example_name" value="" />
+            </div>
+
+          <div class="slider-result">
+            <p class="result" id="result-paste"></p><span>&#8381;</span>
+          </div>
+
+          </div>
+
+          <div class="row">
+            <div class="ion-item">
+              <label for="period">Срок ипотеки</label>
+              <input type="text" id="period" name="example_name" value="" />
+            </div>
+            <div class="slider-result">
+              <p class="result" id="result-period"></p><span>год/лет</span>
+            </div>
+          </div>
+
         </div>
 
-        <div class="row">
-          <label for="paste">Первоначальный взнос</label>
-          <input type="text" id="paste" name="example_name" value="" />
-        </div>
+        <div class="col-xs-6 result-issue">
 
-        <div class="row">
-          <label for="paste">Срок ипотеки</label>
-          <input type="text" id="period" name="example_name" value="" />
-        </div>
+          <label>РАЗМЕР КРЕДИТА:</label>
+          <p id="sizeCredit"></p>
 
-        <p>РАЗМЕР КРЕДИТА: <span></span></p>
-        <p>ЕЖЕМЕСЯЧНЫЙ ПЛАТЕЖ: <span></span></p>
-        <p>НЕОБХОДИМЫЙ ЕЖЕМЕСЯЧНЫЙ ДОХОД: <span></span></p>
-        <p>СТАВКА ПО КРЕДИТУ: <span></span></p>
+          <div class='devider'></div>
+
+          <label>ЕЖЕМЕСЯЧНЫЙ ПЛАТЕЖ:</label>
+          <p id="post_period"></p>
+
+          <div class='devider'></div>
+
+          <label>НЕОБХОДИМЫЙ ЕЖЕМЕСЯЧНЫЙ ДОХОД:</label>
+          <p id="must_payment"></p>
+
+          <div class='devider'></div>
+
+          <label>СТАВКА ПО КРЕДИТУ:</label>
+          <p id="paste_current"></p>
+
+        <div/>
+
+
 
 
 
