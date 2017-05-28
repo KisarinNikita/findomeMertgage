@@ -14,6 +14,19 @@ let currentPricePaste = 0;
 
 $(document).ready(function() {
 
+  $("#callform").submit(function() {
+  var th = $(this);
+  $.ajax({
+    type: "POST",
+    url: "cgi-bin/forms.php",
+    data: th.serialize()
+  }).done(function() {
+    $("#myModal").modal('hide');
+    alert("Заявка отправлена!")
+  });
+  return false;
+});
+
 
   $("#app_cost").ionRangeSlider({
       min: 1800000,
@@ -127,7 +140,9 @@ $(document).ready(function() {
     $("#sizeCredit").html((String(currentPriceFlat - currentPricePaste).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ')) + " <span>&#8381;</span>");
   });
 
-  $("#period").change(function() {
+
+
+  $("#period").bind('change', function(e) {
     let summCredit = parseFloat($("#app_cost").val());
     let creditTerm = parseFloat($("#period").val());
     let currentPaste1 = parseInt(currentPaste);
@@ -142,20 +157,6 @@ $(document).ready(function() {
     $("#must_payment").html(MustMonthly.toString().split('.')[0].replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + " <span>&#8381;</span>");
   });
 
-  $("#paste").bind("change", function(e) {
-    let summCredit = parseFloat($("#app_cost").val());
-    let creditTerm = parseFloat($("#period").val());
-    let currentPaste1 = parseInt(currentPaste);
-
-    let payment = Math.abs(MonthlyPayment(summCredit, creditTerm, currentPaste));
-    let MustMonthly = Math.abs(mustMonthlyIncome(payment));
-
-     payment /= 10;
-     MustMonthly /= 10;
-
-    $("#post_period").html(payment.toString().split('.')[0].replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + " <span>&#8381;</span>");
-    $("#must_payment").html(MustMonthly.toString().split('.')[0].replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + " <span>&#8381;</span>");
-  });
 
 
 

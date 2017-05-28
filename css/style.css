@@ -29,9 +29,6 @@ a:hover {
 a:focus {
   text-decoration: none;
 }
-.container {
-  margin-top: 50px;
-}
 @media (max-width: 1000px) {
   .container {
     width: 996px;
@@ -185,4 +182,172 @@ input[type=radio]:checked + label:before {
 }
 .check-line label {
   font-weight: 400;
+}
+header {
+  margin-bottom: 25px;
+  background: #eeeeee;
+  height: 50px;
+  width: 100%;
+  top: 0px;
+  border-bottom: 1px solid #d3d3d3;
+}
+header .logo {
+  width: 140px;
+  margin-top: 0px;
+  cursor: pointer;
+  margin-top: 10px;
+  position: absolute;
+}
+header .menu-list {
+  width: 100%;
+  float: left;
+  text-align: center;
+  height: 50px;
+  line-height: 51px;
+}
+header .menu-list li {
+  list-style: none;
+  display: inline;
+  margin-left: 20px;
+}
+header .menu-list li a {
+  color: #939393;
+  font-size: 14px;
+  text-decoration: none;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  outline: none;
+}
+header .menu-list li a:hover {
+  color: #1a1a1a;
+}
+.call-button {
+  display: block;
+  width: 300px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  border: none;
+  margin-top: 95px;
+  color: #fff;
+  font-size: 16px;
+  background: #00b7e4;
+  transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -webkit-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+}
+.call-button:hover {
+  transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -webkit-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  background: #3e90b1;
+  color: #fff;
+}
+.call-button:focus {
+  transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -webkit-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  background: #3e90b1;
+  color: #fff;
+}
+.container-modal-city {
+  width: 500px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 2%;
+  background: #f2f2f2;
+  border: 1px solid #939393;
+  padding-bottom: 50px;
+}
+.container-modal-city h2 {
+  font-size: 22px;
+  padding-top: 35px;
+  padding-left: 43px;
+}
+.modal-open .modal {
+  background: rgba(255, 255, 255, 0.8);
+}
+.close-modal {
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 70px;
+  width: 70px;
+  outline: none;
+}
+.close-modal img {
+  top: 27.5px;
+  right: 27.5px;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  opacity: 1;
+}
+.modal-box {
+  margin-top: 25px;
+}
+.modal-box a {
+  color: #1a1a1a;
+  font-size: 18px;
+  padding: 14px 14px;
+}
+.modal-box a:hover {
+  border: 1px solid #939393;
+  border-radius: 5px;
+}
+.modal-box a:focus {
+  border: 1px solid #939393;
+  border-radius: 2px;
+}
+.modal-box label {
+  width: 100%;
+}
+.modal-box .row {
+  margin: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.modal-box input[type="text"] {
+  height: 40px;
+  background: #fff;
+  border: 1px solid #939393;
+  border-radius: 3px;
+  width: 100%;
+  padding-left: 15px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.modal-box input[type="submit"] {
+  height: 40px;
+  line-height: 40px;
+  background: #00b7e4;
+  color: #fff;
+  border-radius: 3px;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 25px;
+  text-transform: uppercase;
+  border: none;
+  transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -webkit-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+}
+.modal-box input[type="submit"]:hover {
+  background: #3e90b1;
+  transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -webkit-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+}
+.modal-box input[type="submit"]:focus {
+  background: #3e90b1;
+  transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -webkit-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
 }

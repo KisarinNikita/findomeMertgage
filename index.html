@@ -15,6 +15,19 @@
   </head>
   <body>
     <div class="wrapper">
+    <header>
+      <div class="container">
+        <a href="http://novosibirsk.findome.ru">
+          <img class="logo" src="http://novosibirsk.findome.ru/sites/all/themes/realty_theme/images/logotip.svg" alt="">
+        </a>
+        <div class="menu-list">
+          <li><a href="http://novosibirsk.findome.ru/search/">ПОДБОР КВАРТИР</a></li>
+          <li><a href="http://novosibirsk.findome.ru/complexes">НОВОСТРОЙКИ</a></li>
+          <li><a href="http://novosibirsk.findome.ru/developers">ЗАСТРОЙЩИКИ</a></li>
+          <li><a href="http://novosibirsk.findome.ru/mortgage">ИПОТЕКА</a></li>
+        </div>
+      </div>
+    </header>
       <div class="content">
         <div class="container">
         <h1>Рассчитайте вашу ипотеку</h1>
@@ -23,12 +36,12 @@
 
           <div class="check-line">
             <input id="area" type="checkbox" name="check">
-            <label for="area">Площадь квартиры</label><br>
+            <label title="Ставка по кредиту ниже на 1%" for="area">Площадь квартиры более 65 м<sup>2</sup></label><br>
           </div>
 
           <div class="check-line">
             <input id="vtbcard" type="checkbox">
-            <label for="vtbcard">Я получаю зарплату на карту ВТБ</label><br>
+            <label title="Ставка по кредиту снижена" for="vtbcard">Я получаю зарплату на карту ВТБ</label><br>
           </div>
 
           <div class="check-line">
@@ -93,17 +106,63 @@
           <label>СТАВКА ПО КРЕДИТУ:</label>
           <p id="paste_current"></p>
 
+          <a href="" class="call-button" data-toggle="modal" data-target=".call-modal">Заполнить заявку</a>
+
         <div/>
-
-
-
-
 
         </div>
         <div class="footer">
         </div>
       </div>
     </div>
+
+
+    <div class="modal fade call-modal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="myModal">
+      <div class="container container-modal-city zero-padding">
+        <button type="button" class="close close-modal" data-dismiss="modal" aria-hidden="true">
+          <img src="img/closem.svg">
+        </button>
+        <h2>Заявка на ипотечный кредит</h2>
+        <form id="callform">
+          <div class="col-xs-12 modal-box">
+            <div class="row">
+              <label for="surname">Фамилия*</label>
+              <input type="text" id="surname" name="Фамилия" value="" required>
+            </div>
+            <div class="row">
+              <label for="name">Имя*</label>
+              <input type="text" id="name" name="Имя" required>
+            </div>
+            <div class="row">
+              <label for="patronymic">Отчество</label>
+              <input type="text" id="patronymic" name="Отчество">
+            </div>
+            <div class="row">
+              <label for="phone">Мобильный телефон*</label>
+              <input type="text" id="phone" name="Телефон" required>
+            </div>
+            <div class="row">
+              <label for="email">E-mail</label>
+              <input type="text" id="email" name="Почта">
+            </div>
+
+						<input type="hidden" name="admin_email" value="kisarinnikita@yandex.ru">
+						<input type="hidden" name="Форма" value="Запись на ипотеку">
+
+            <div class="row">
+              <p>После отправки заявки вам перезвонит сотрудник банка, проконсультирует и примет недостающие данные по телефону.</p>
+              <input type="checkbox" id="agree" required=""/>
+              <label for="agree">Я соглашаюсь с условиями использования персональных данных</label>
+              <input type="submit" value="Отправить">
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.1.7/js/ion.rangeSlider.min.js"></script>
     <script src="js/main.js"></script>
