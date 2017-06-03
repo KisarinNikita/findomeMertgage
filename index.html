@@ -86,7 +86,11 @@
 
         </div>
 
-        <div class="col-xs-6 result-issue">
+        <div class="col-xs-6 result-issue" style="padding-top: 30px;">
+          <img style="width: 170px;
+    position: absolute;
+    top: -40px;
+    margin-left: 0px;" src="img/logo.png" alt="">
 
           <label>РАЗМЕР КРЕДИТА:</label>
           <p id="sizeCredit"></p>
@@ -123,30 +127,30 @@
           <img src="img/closem.svg">
         </button>
         <h2>Заявка на ипотечный кредит</h2>
-        <form id="callform">
+        <form id="callform" method="POST" action="cgi-bin/forms.php">
           <div class="col-xs-12 modal-box">
             <div class="row">
               <label for="surname">Фамилия*</label>
-              <input type="text" id="surname" name="Фамилия" value="" required>
+              <input type="text" id="surname" name="family" value="" required>
             </div>
             <div class="row">
               <label for="name">Имя*</label>
-              <input type="text" id="name" name="Имя" required>
+              <input type="text" id="name" name="name" required>
             </div>
             <div class="row">
               <label for="patronymic">Отчество</label>
-              <input type="text" id="patronymic" name="Отчество">
+              <input type="text" id="patronymic" name="patronymic">
             </div>
             <div class="row">
               <label for="phone">Мобильный телефон*</label>
-              <input type="text" id="phone" name="Телефон" required>
+              <input type="text" id="phone" name="phone" required>
             </div>
             <div class="row">
               <label for="email">E-mail</label>
-              <input type="text" id="email" name="Почта">
+              <input type="text" id="email" name="mail">
             </div>
 
-						<input type="hidden" name="admin_email" value="kisarinnikita@yandex.ru">
+						<input type="hidden" name="admin_email" value="findome@mail.ru">
 						<input type="hidden" name="Форма" value="Запись на ипотеку">
 
             <div class="row">

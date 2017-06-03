@@ -97,11 +97,11 @@ $(document).ready(function() {
     if ($(this).is(":checked")) {
       if (currentPaste  > minPaste && currentPaste  + squareDiscount > minPaste) {
           currentPaste -= squareDiscount;
-          $("#paste_current").html(currentPaste);
+          $("#paste_current").html(currentPaste + " <span>%</span>");
       }
     } else {
       currentPaste += squareDiscount;
-      $("#paste_current").html(currentPaste);
+      $("#paste_current").html(currentPaste + " <span>%</span>");
     }
   });
 
@@ -109,11 +109,11 @@ $(document).ready(function() {
     if ($(this).is(":checked")) {
       if (currentPaste > minPaste && currentPaste + vtb > minPaste) {
         currentPaste -= vtb;
-        $("#paste_current").html(currentPaste);
+        $("#paste_current").html(currentPaste + " <span>%</span>");
       }
     } else {
       currentPaste += vtb;
-      $("#paste_current").html(currentPaste);
+      $("#paste_current").html(currentPaste + " <span>%</span>");
     }
   });
 
@@ -121,11 +121,11 @@ $(document).ready(function() {
     if ($(this).is(":checked")) {
         if (currentPaste > minPaste && currentPaste + vtb > minPaste) {
           currentPaste += onlyTwoDocs;
-          $("#paste_current").html(currentPaste);
+          $("#paste_current").html(currentPaste + " <span>%</span>");
         }
     } else {
       currentPaste -= onlyTwoDocs;
-      $("#paste_current").html(currentPaste);
+      $("#paste_current").html(currentPaste + " <span>%</span>");
     }
   });
 
@@ -175,13 +175,13 @@ $(document).ready(function() {
   $("#must_payment").html(MustMonthly.toString().split('.')[0].replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + " <span>&#8381;</span>");
 
 
-    $("#paste_current").html(currentPaste);
+    $("#paste_current").html(currentPaste + " <span>%</span>");
 });
 
 
 
 let MonthlyPayment = function(summCredit, creditTerm, currentPaste) {
-  var creditTermM = creditTerm * 12 - 1;
+  var creditTermM = creditTerm * 12 ;
   console.log(creditTermM);
   let currentCredit = summCredit - parseInt($("#paste").val());
   var newCurrentPaste = currentPaste / 1200;
